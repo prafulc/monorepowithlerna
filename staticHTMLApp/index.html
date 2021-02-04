@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    function loadWidget () {
+      // your page initialization code here
+      // the DOM will be available here
+      let widget = new window.ReactWidget({
+        id: 'root'
+      })
+      widget.init();
+    };
+  </script>
+  <script src="dist/js/3.f4ac054b.chunk.js"></script>
+  <script src="dist/js/main.c24eb9a1.chunk.js"></script>
+  <script src="dist/js/runtime-main.bdbbf609.js"></script>
+  <script onload="loadWidget()" src="dist/js/2.2fb2ac61.chunk.js"></script>
+</body>
+
+</html>

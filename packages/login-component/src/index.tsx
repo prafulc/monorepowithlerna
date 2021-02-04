@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Box, Grid } from '@material-ui/core';
 
 import LoginUsername from './components/loginUsername';
 import LoginPassword from './components/loginPassword';
@@ -25,17 +24,9 @@ export default class LoginComponent extends React.Component <Props, State> {
     this.setState({ user: false });
   }
   render () {
-    return <Box>
-      <Grid container>
-        <Grid item xs>
-          <h2>Login</h2>
-        </Grid>
-      </Grid>
-      <Grid container>
-        <Grid item xs>
-          {this.state.user ? <LoginPassword handleClick={this.handlePassword} /> : <LoginUsername handleClick={this.handleUsername} />}
-        </Grid>
-      </Grid>
-    </Box>
+    return <div>
+      <h2>Login</h2>
+        {this.state.user ? <LoginPassword handleClick={this.handlePassword} /> : <LoginUsername handleClick={this.handleUsername} />}
+    </div>
   }
 }
